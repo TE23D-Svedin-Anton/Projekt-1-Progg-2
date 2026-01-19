@@ -1,5 +1,5 @@
 public class Lagenhetshus extends Byggnader{
-    int antalLägenheter;
+    private int antalLägenheter;
 
     public Lagenhetshus(int pris, String byggnad, int antalLägenheter) {
         super(pris, byggnad);
@@ -12,6 +12,6 @@ public class Lagenhetshus extends Byggnader{
 
     @Override
     public String toString() {
-        return "Lagenhetshus [pris:" + pris + ", byggnad:" + byggnad + ", antalLägenheter:" + antalLägenheter + "]";
+        return "Lagenhetshus [pris:" + getPris() + ", byggnad:" + getByggnad() + ", antalLägenheter:" + antalLägenheter + "]";
     }
 }

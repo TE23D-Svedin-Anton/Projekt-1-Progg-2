@@ -1,29 +1,23 @@
 public class Bestallning {
-    int pris;
-    String byggnad;
-    int personummer;
+    private int personummer;
+    private int telefonnummer;
     
-    public Bestallning(int pris, String byggnad, int personummer) {
-        this.pris = pris;
-        this.byggnad = byggnad;
+    public Bestallning(int personummer, int telefonnummer) {
         this.personummer = personummer;
-    }
-
-    public int getPris() {
-        return pris;
-    }
-
-    public String getByggnad() {
-        return byggnad;
+        this.telefonnummer = telefonnummer;
     }
 
     public int getPersonummer() {
         return personummer;
     }
 
+    public int getTelefonnummer() {
+        return telefonnummer;
+    }
+
     @Override
     public String toString() {
-        return "Bestallning [pris:" + pris + ", byggnad:" + byggnad + ", personummer:" + personummer + "]";
+        return "Bestallning [personummer:" + personummer + ", telefonnummer:" + telefonnummer + "]";
     }
 
     

@@ -1,6 +1,6 @@
 public class Byggnader {
-    int pris;
-    String byggnad;
+    private int pris;
+    private String byggnad;
 
     public Byggnader(int pris, String byggnad) {
         this.pris = pris;

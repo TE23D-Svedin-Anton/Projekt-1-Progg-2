@@ -1,10 +1,10 @@
 public class Radhus extends Byggnader{
-    int rum;
-    int yta;
-    int badrum;
-    int kök;
-    int tomt;
-    
+    private int rum;
+    private int yta;
+    private int badrum;
+    private int kök;
+    private int tomt;
+
     public Radhus(int pris, String byggnad, int rum, int yta, int badrum, int kök, int tomt) {
         super(pris, byggnad);
         this.rum = rum;
@@ -31,7 +31,7 @@ public class Radhus extends Byggnader{
 
     @Override
     public String toString() {
-        return "Radhus [pris:" + pris + ", byggnad:" + byggnad + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum
+        return "Radhus [pris:" + getPris() + ", byggnad:" + getByggnad() + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum
                 + ", kök:" + kök + ", tomt:" + tomt + "]";
     }
 }

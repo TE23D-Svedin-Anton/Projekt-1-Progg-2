@@ -1,6 +1,6 @@
 public class Garage extends Byggnader{
-    int bilArea;
-    int föradsVolym;
+    private int bilArea;
+    private int föradsVolym;
     
     public Garage(int pris, String byggnad, int bilArea, int föradsVolym) {
         super(pris, byggnad);
@@ -18,7 +18,7 @@ public class Garage extends Byggnader{
 
     @Override
     public String toString() {
-        return "Garage [pris:" + pris + ", byggnad:" + byggnad + ", bilArea:" + bilArea + ", föradsVolym:" + föradsVolym
+        return "Garage [pris:" + getPris() + ", byggnad:" + getByggnad() + ", bilArea:" + bilArea + ", föradsVolym:" + föradsVolym
                 + "]";
     }
 }

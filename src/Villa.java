@@ -1,9 +1,9 @@
 public class Villa extends Byggnader{
-    int rum;
-    int yta;
-    int badrum;
-    int kök;
-    int tomt;
+    private int rum;
+    private int yta;
+    private int badrum;
+    private int kök;
+    private int tomt;
 
     public Villa(int pris, String byggnad, int rum, int yta, int badrum, int kök, int tomt) {
         super(pris, byggnad);
@@ -32,7 +32,7 @@ public class Villa extends Byggnader{
 
     @Override
     public String toString() {
-        return "Villa [pris:" + pris + ", byggnad:" + byggnad + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum
+        return "Villa [pris:" + getPris() + ", byggnad:" + getByggnad() + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum
                 + ", kök:" + kök + ", tomt:" + tomt + "]";
     }
 }
