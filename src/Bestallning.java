@@ -23,7 +23,7 @@
 
         @Override
         public String toString() {
-            return "Bestallning [Personummer:" + personummer + ", Telefonnummer:" + telefonnummer + byggnad + "]";
+            return "[Personummer:" + personummer + ", Telefonnummer:" + telefonnummer + byggnad + "]";
         }
     
     }

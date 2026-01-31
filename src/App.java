@@ -13,8 +13,9 @@ public class App {
         while (on) {
             System.out.println("1. Lägg en beställning");
             System.out.println("2. Se beställningar");
-            System.out.println("3. Priser");
-            System.out.println("4. Avsluta");
+            System.out.println("3. Ta bort beställning");
+            System.out.println("4. Priser");
+            System.out.println("5. Avsluta");
 
             System.out.print("Välj alternativ:");
             int val = tangentbord.nextInt();
@@ -73,7 +74,6 @@ public class App {
                             } catch (Exception e) {
                                 System.out.println("Fel: " + e.getMessage());
                             }
-
                             break;
 
                         case 2:
@@ -89,11 +89,38 @@ public class App {
                     break;
 
                 case 2:
-
+                    for (int i = 0; i < bestallningsLista.size(); i++) {
+                        System.out.println("Beställning " + (i + 1) + ": " + bestallningsLista.get(i));
+                    }
                     break;
 
                 case 3:
+                    System.out.print("Ange personummer för beställningen som ska tas bort:");
+                    int personummerAttTaBort = tangentbord.nextInt();
 
+                    boolean hittad = false;
+
+                    for (int i = 0; i < bestallningsLista.size(); i++) {
+                        if (bestallningsLista.get(i).getPersonummer() == personummerAttTaBort) {
+                            bestallningsLista.remove(i);
+                            hittad = true;
+                            System.out.println("Beställning borttagen!");
+                            break;
+                        }
+                    }
+
+                    if (!hittad) {
+                        System.out.println("Ingen beställning hittades med det personumret.");
+                    }
+                    break;
+
+                case 4:
+
+                    break;
+
+                case 5:
+                    System.out.println("Avbryter Program");
+                    on = false;
                     break;
             }
         }
