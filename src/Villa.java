@@ -1,16 +1,19 @@
-public class Villa extends Byggnader{
+public class Villa extends Byggnad{
     private int rum;
     private int yta;
     private int badrum;
-    private int kök;
+    private int kok;
     private int tomt;
 
-    public Villa(int pris, String byggnad, int rum, int yta, int badrum, int kök, int tomt) {
-        super(pris, byggnad);
+    public Villa(int pris, String typ, int rum, int yta, int badrum, int kok, int tomt) {
+        super(pris, typ);
+        if( 4 > rum || rum > 7) {
+            throw new IllegalArgumentException("Man kan minst ha 4 rum och max 7");
+        }
         this.rum = rum;
         this.yta = yta;
         this.badrum = badrum;
-        this.kök = kök;
+        this.kok = kok;
         this.tomt = tomt;
     }
 
@@ -23,8 +26,8 @@ public class Villa extends Byggnader{
     public int getBadrum() {
         return badrum;
     }
-    public int getKök() {
-        return kök;
+    public int getKok() {
+        return kok;
     }
     public int getTomt() {
         return tomt;
@@ -32,7 +35,6 @@ public class Villa extends Byggnader{
 
     @Override
     public String toString() {
-        return "Villa [pris:" + getPris() + ", byggnad:" + getByggnad() + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum
-                + ", kök:" + kök + ", tomt:" + tomt + "]";
+        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Rum:" + rum + ", Yta:" + yta + ", Badrum:" + badrum + ", Kök:" + kok + ", Tomt:" + tomt;
     }
 }

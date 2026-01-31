@@ -1,17 +1,28 @@
-public class Lagenhet extends Lagenhetshus{
+public class Lagenhet{
+    private int pris;
+    private String typ;
     private int rum;
     private int yta;
     private int badrum;
-    private int kök;
+    private int kok;
 
-    public Lagenhet(int pris, String byggnad, int antalLägenheter, int rum, int yta, int badrum, int kök) {
-        super(pris, byggnad, antalLägenheter);
+    public Lagenhet(int pris, String typ, int rum, int yta, int badrum, int kok) {
+        this.pris = pris;
+        this.typ = typ;
         this.rum = rum;
         this.yta = yta;
         this.badrum = badrum;
-        this.kök = kök;
+        this.kok = kok;
     }
     
+    public int getPris() {
+        return pris;
+    }
+
+    public String getTyp() {
+        return typ;
+    }
+
     public int getRum() {
         return rum;
     }
@@ -21,13 +32,12 @@ public class Lagenhet extends Lagenhetshus{
     public int getBadrum() {
         return badrum;
     }
-    public int getKök() {
-        return kök;
+    public int getKok() {
+        return kok;
     }
 
     @Override
     public String toString() {
-        return "Lagenhet [pris:" + getPris() + ", byggnad:" + getByggnad() + ", antalLägenheter:" + getAntalLägenheter() + ", rum:"
-                + rum + ", yta:" + yta + ", badrum:" + badrum + ", kök:" + kök + "]";
+        return "Lägenhet [Pris:" + pris + ", Byggnad:" + typ + ", rum:" + rum + ", yta:" + yta + ", badrum:" + badrum + ", kök:" + kok + "]";
     }  
 }
