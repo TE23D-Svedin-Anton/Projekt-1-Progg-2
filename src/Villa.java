@@ -7,9 +7,10 @@ public class Villa extends Byggnad{
 
     public Villa(int pris, String typ, int rum, int yta, int badrum, int kok, int tomt) {
         super(pris, typ);
-        if( 4 > rum || rum > 7) {
-            throw new IllegalArgumentException("Man kan minst ha 4 rum och max 7");
+        if( 4 > rum || rum > 7 || 150 > yta || yta > 230 || 1 > badrum || badrum > 2 || 400 > tomt || tomt > 1000) {
+            throw new IllegalArgumentException("Du har angett ogiltig information om order");
         }
+        
         this.rum = rum;
         this.yta = yta;
         this.badrum = badrum;
