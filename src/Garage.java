@@ -1,10 +1,10 @@
-public class Garage extends Byggnad{
+public class Garage extends Byggnad {
     private int bilArea;
     private int foradsArea;
-    
+
     public Garage(int pris, String typ, int bilArea, int foradsArea) {
         super(pris, typ);
-        if( 15 > bilArea || bilArea > 30 || 150 > foradsArea || foradsArea > 230) {
+        if (15 > bilArea || bilArea > 30 || 5 > foradsArea || foradsArea > 20) {
             throw new IllegalArgumentException("Du har angett ogiltig information om order");
         }
         this.bilArea = bilArea;
@@ -21,6 +21,6 @@ public class Garage extends Byggnad{
 
     @Override
     public String toString() {
-        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Bilarea:" + bilArea + ", FörådsArea:" + foradsArea + "]";
+        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Bilarea:" + bilArea + ", FörådsArea:" + foradsArea;
     }
 }

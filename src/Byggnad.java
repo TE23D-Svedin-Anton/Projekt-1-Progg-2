@@ -1,4 +1,4 @@
-public class Byggnad{
+public class Byggnad {
     private int pris;
     private String typ;
 

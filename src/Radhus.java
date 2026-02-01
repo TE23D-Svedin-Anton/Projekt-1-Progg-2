@@ -1,4 +1,4 @@
-public class Radhus extends Byggnad{
+public class Radhus extends Byggnad {
     private int rum;
     private int yta;
     private int badrum;
@@ -13,24 +13,30 @@ public class Radhus extends Byggnad{
         this.kok = kok;
         this.tomt = tomt;
     }
+
     public int getRum() {
         return rum;
     }
+
     public int getYta() {
         return yta;
     }
+
     public int getBadrum() {
         return badrum;
     }
+
     public int getKok() {
         return kok;
     }
+
     public int getTomt() {
         return tomt;
     }
 
     @Override
     public String toString() {
-        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Rum:" + rum + ", Yta:" + yta + ", Badrum:" + badrum + ", Kök:" + kok + ", Tomt:" + tomt + "]";
+        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Rum:" + rum + ", Yta:" + yta + ", Badrum:" + badrum
+                + ", Kök:" + kok + ", Tomt:" + tomt + "]";
     }
 }

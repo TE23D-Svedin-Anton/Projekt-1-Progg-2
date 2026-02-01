@@ -134,7 +134,7 @@ public class App {
                                 System.out.print("Bil-area:");
                                 int bilArea = tangentbord.nextInt();
 
-                                System.out.println("Välj hur stor förrådsarea(kvm) du vill ha. Min 5 & Max ");
+                                System.out.println("Välj hur stor förrådsarea(kvm) du vill ha. Min 5 & Max 20");
                                 System.out.print("Förrådsarea:");
                                 int foradsArea = tangentbord.nextInt();
 
