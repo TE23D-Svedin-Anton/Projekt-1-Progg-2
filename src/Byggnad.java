@@ -14,9 +14,4 @@ public class Byggnad{
     public String getTyp() {
         return typ;
     }
-
-    @Override
-    public String toString() {
-        return "Byggnad [Pris:" + pris + ", Byggnad:" + typ + "]";
-    }
 }

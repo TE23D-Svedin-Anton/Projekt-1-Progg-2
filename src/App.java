@@ -14,8 +14,7 @@ public class App {
             System.out.println("1. Lägg en beställning");
             System.out.println("2. Se beställningar");
             System.out.println("3. Ta bort beställning");
-            System.out.println("4. Priser");
-            System.out.println("5. Avsluta");
+            System.out.println("4. Avsluta");
 
             System.out.print("Välj alternativ:");
             int val = tangentbord.nextInt();
@@ -66,9 +65,9 @@ public class App {
                                 int pris = 3500000 + (rum - 4) * 200000 + (yta - 150) * 20000 + (badrum - 1) * 300000
                                         + (tomt - 400) * 1000;
 
-                                Villa minVilla = new Villa(pris, typ, rum, yta, badrum, Kok, tomt);
+                                Villa bestalldVilla = new Villa(pris, typ, rum, yta, badrum, Kok, tomt);
 
-                                Bestallning info = new Bestallning(personummer, telefonnummer, minVilla);
+                                Bestallning info = new Bestallning(personummer, telefonnummer, bestalldVilla);
                                 bestallningsLista.add(info);
 
                             } catch (Exception e) {
@@ -77,9 +76,78 @@ public class App {
                             break;
 
                         case 2:
+                            try {
+                                System.out.println("___Beställning___");
+                                System.out.println("Byggnad: Radhus");
+                                String typ = ("Radhus");
+
+                                System.out.print("Personummer:");
+                                int personummer = tangentbord.nextInt();
+
+                                System.out.print("Telefonnummer:");
+                                int telefonnummer = tangentbord.nextInt();
+
+                                System.out.println("Välj hur många rum du vill ha. Min 4 & Max 7");
+                                System.out.print("Rum:");
+                                int rum = tangentbord.nextInt();
+
+                                System.out.println("Välj hur stor yta(kvm) du vill ha. Min 150 & Max 230");
+                                System.out.print("Yta:");
+                                int yta = tangentbord.nextInt();
+
+                                System.out.println("Välj hur många badrum du vill ha. Min 1 & Max 2");
+                                System.out.print("Badrum:");
+                                int badrum = tangentbord.nextInt();
+
+                                int Kok = 1;
+
+                                System.out.println("Välj hur stor tomt(kvm) du vill ha. Min 400 & Max 1000");
+                                System.out.print("Tomt:");
+                                int tomt = tangentbord.nextInt();
+
+                                int pris = 2500000 + (rum - 4) * 200000 + (yta - 150) * 20000 + (badrum - 1) * 300000
+                                        + (tomt - 400) * 1000;
+
+                                Radhus bestalldRadhus = new Radhus(pris, typ, rum, yta, badrum, Kok, tomt);
+
+                                Bestallning info = new Bestallning(personummer, telefonnummer, bestalldRadhus);
+                                bestallningsLista.add(info);
+
+                            } catch (Exception e) {
+                                System.out.println("Fel: " + e.getMessage());
+                            }
                             break;
 
                         case 3:
+                            try {
+                                System.out.println("___Beställning___");
+                                System.out.println("Byggnad: Garage");
+                                String typ = ("Garage");
+
+                                System.out.print("Personummer:");
+                                int personummer = tangentbord.nextInt();
+
+                                System.out.print("Telefonnummer:");
+                                int telefonnummer = tangentbord.nextInt();
+
+                                System.out.println("Välj hur stor bil-area(kvm) du vill ha. Min 15 & Max 30");
+                                System.out.print("Bil-area:");
+                                int bilArea = tangentbord.nextInt();
+
+                                System.out.println("Välj hur stor förrådsarea(kvm) du vill ha. Min 5 & Max ");
+                                System.out.print("Förrådsarea:");
+                                int foradsArea = tangentbord.nextInt();
+
+                                int pris = 500000 + (bilArea - 15) * 20000 + (foradsArea - 30) * 1000;
+
+                                Garage bestalldGarage = new Garage(pris, typ, bilArea, foradsArea);
+
+                                Bestallning info = new Bestallning(personummer, telefonnummer, bestalldGarage);
+                                bestallningsLista.add(info);
+
+                            } catch (Exception e) {
+                                System.out.println("Fel: " + e.getMessage());
+                            }
                             break;
 
                         case 4:
@@ -115,10 +183,6 @@ public class App {
                     break;
 
                 case 4:
-
-                    break;
-
-                case 5:
                     System.out.println("Avbryter Program");
                     on = false;
                     break;

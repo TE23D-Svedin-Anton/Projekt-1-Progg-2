@@ -31,6 +31,6 @@ public class Radhus extends Byggnad{
 
     @Override
     public String toString() {
-        return "Radhus [Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Rum:" + rum + ", Yta:" + yta + ", Badrum:" + badrum + ", Kök:" + kok + ", Tomt:" + tomt + "]";
+        return ", Pris:" + getPris() + ", Byggnad:" + getTyp() + ", Rum:" + rum + ", Yta:" + yta + ", Badrum:" + badrum + ", Kök:" + kok + ", Tomt:" + tomt + "]";
     }
 }
